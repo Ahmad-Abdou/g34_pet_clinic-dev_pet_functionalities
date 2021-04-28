@@ -9,8 +9,11 @@ import se.lexicon.pet_clinic.entity.PetType;
 public interface PetRepository extends CrudRepository<Pet,String> {
 
     Pet findByNameIgnoreCase(String name);
-    Pet findByPetTypeName(PetType petType);
-    Pet findByOwner(Owner owner);
-    Pet findByOwnerTelephoneNumber(Owner owner);
+
+    Pet findByPetType_NameIgnoreCase(String name);
+
+    Pet findByOwner_FirstNameAndOwnerLastName(String firstName , String LastName);
+
+    Pet findByOwnerTelephone(String telephone);
 
 }

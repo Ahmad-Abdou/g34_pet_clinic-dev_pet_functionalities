@@ -23,4 +23,13 @@ public class Owner {
     private String address;
     private String telephone;
 
+    public Owner(String firstName, String lastName) {
+        this.firstName = firstName;
+        this.lastName = lastName;
+    }
+
+    public Owner() {
+
+    }
 }
+
