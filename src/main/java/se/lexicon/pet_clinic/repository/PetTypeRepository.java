@@ -1,6 +1,11 @@
 package se.lexicon.pet_clinic.repository;
 
-public interface PetTypeRepository {
-    // todo: implement basic CRUD
+import org.springframework.data.repository.CrudRepository;
+import se.lexicon.pet_clinic.entity.PetType;
 
+import java.util.List;
+
+public interface PetTypeRepository extends CrudRepository<PetType, Integer> {
+
+    List<PetType> findByName(String name);
 }
