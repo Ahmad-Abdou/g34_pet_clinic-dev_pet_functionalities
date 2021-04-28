@@ -14,7 +14,7 @@ import java.util.List;
 @RestController
 @RequestMapping("/api/pet")
 public class PetController {
-    // todo: define rest APIs regarding the service functionalities
+
     PetService petService;
 
     @Autowired

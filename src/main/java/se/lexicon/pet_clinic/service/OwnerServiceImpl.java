@@ -71,7 +71,10 @@ public class OwnerServiceImpl implements OwnerService {
 
     @Override
     public void deleteById(String id) {
-        // todo: implement delete by id
+        Optional<Owner> owner = ownerRepository.findById(id);
+        if(owner.isPresent()){
+            ownerRepository.deleteById(id);
+        }
     }
 
     @Override
