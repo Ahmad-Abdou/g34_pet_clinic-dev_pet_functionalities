@@ -40,6 +40,7 @@ public class PetServiceImpl implements PetService{
 
     @Override
     public PetDto update(PetDto dto) {
+
         Pet pet = petRepository.save(modelMapper.map(dto,Pet.class));
         PetDto petDto = modelMapper.map(pet,PetDto.class);
         return petDto;
@@ -68,7 +69,6 @@ public class PetServiceImpl implements PetService{
             PetDto petDto = modelMapper.map(pet.get(),PetDto.class);
             return petDto;
         }
-
         else throw new DataNotFoundException("Data not found");
     }
 

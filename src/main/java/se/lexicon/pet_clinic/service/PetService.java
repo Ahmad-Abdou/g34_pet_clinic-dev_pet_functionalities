@@ -10,7 +10,7 @@ public interface PetService {
 
     PetDto save(PetDto dto);
 
-    PetDto update(PetDto dto) throws DataNotFoundException;
+    PetDto update(PetDto dto);
 
     void deleteById(String id);
 
